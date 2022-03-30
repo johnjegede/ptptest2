@@ -30,8 +30,6 @@
 #!/bin/bash
 SUCCESS_MSG="Test completed successfully"
 START_MSG="Started running a latency test"
-EMAIL_ADDR="jegede400@gmail.com"
-EMAIL_INFO="serveremail@somewhere.com"
 export TEST_PATH=/ueransim/latency/
 TEST_NUMBER=3
 IS_SERVER=0
@@ -42,7 +40,6 @@ export CAMIO_PATH=/ueransim/latency/tools/qjump-camio-tools
 
 cd $TEST_PATH
 echo "Sending start email"
-echo $START_MSG| mail -s "Latency test status report" -r "laency-server<latency.server@somewhere.com>" $EMAIL_ADDR
 
 
 
@@ -71,4 +68,3 @@ fi
 
 
 echo "RUN_STATE=0" > /root/test_state.txt
-echo $SUCCESS_MSG| mail -s "Latency test status report" -r "$EMAIL_INFO" $EMAIL_ADDR
